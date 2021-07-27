@@ -4,7 +4,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-    padding: 0;
+    padding: 20px;
     box-sizing: border-box;
   }
 `
@@ -15,11 +15,11 @@ const theme = {
   },
   typography: {
     title: {
-      fontSize: 20,
+      fontSize: 2,
       fontFamily: 'Tahoma'
     },
     text: {
-      fontSize: 12,
+      fontSize: 1,
       fontFamily: 'Tahoma'
     }
   }
