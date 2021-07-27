@@ -1,10 +1,15 @@
-import styled from 'styled-components'
+import Title from '../components/Title'
+import Text from '../components/Text'
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-export default function Home() {
-  return <Title>My page</Title>
-}
+const Home = () => (
+  <div>
+    <Title>My page</Title>
+    <Text>Hot reload :burn:</Text>
+  </div>
+)
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+export default Home
