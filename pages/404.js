@@ -1,15 +1,14 @@
 import Title from '../components/Title'
-import Text from '../components/Text'
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-const Home = () => (
+const Page404 = () => (
   <div>
-    <Title>My page</Title>
-    <Text>Hot reload :burn:</Text>
+    <Title>Page not found</Title>
+    <img src="https://i.ytimg.com/vi/gArbocrAO78/hqdefault.jpg" alt="Page not found" />
   </div>
 )
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-export default Home
+export default Page404
