@@ -12,14 +12,24 @@ const theme = {
   colors: {
     primary: '#0070f3',
   },
+  typography: {
+    title: {
+      fontSize: 20,
+      fontFamily: 'Tahoma'
+    },
+    text: {
+      fontSize: 12,
+      fontFamily: 'Tahoma'
+    }
+  }
 }
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+      <ThemeProvider theme={ theme }>
+        <Component { ...pageProps } />
       </ThemeProvider>
     </>
   )
