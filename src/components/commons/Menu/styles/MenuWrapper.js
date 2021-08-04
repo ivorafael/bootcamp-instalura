@@ -23,13 +23,28 @@ MenuWrapper.PrimaryNav = styled.div`
   order: 3;
   width: 100%;
   margin-top: 17px;
-  border-top: 1px solid #88989E;
-  border-bottom: 1px solid #88989E;
+  border-top: 1px solid ${ ( { theme } ) => theme.colors.tertiary.light.color };
+  border-bottom: 1px solid ${ ( { theme } ) => theme.colors.tertiary.light.color };
   padding: 12px;
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
   grid-column: 1/3;
+
+  a{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: ${ ( { theme } ) => theme.colors.tertiary.light.color };
+    transition: ${ ( { theme } ) => theme.transition };
+    
+    &:hover,
+    &:focus {
+      /* font-weight: 500; */
+      color: #070C0E;
+
+    }
+  }
 `;
 
 MenuWrapper.AuxNav = styled.div`
