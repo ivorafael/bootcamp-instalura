@@ -2,6 +2,7 @@ import React from 'react'
 
 import { MenuWrapper } from './styles/MenuWrapper'
 import Logo from '../../../theme/Logo'
+import Button from '../Button/Button'
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -33,8 +34,8 @@ const Menu = () => (
     </MenuWrapper.PrimaryNav>
 
     <MenuWrapper.AuxNav>
-      <button>Entrar</button>
-      <button>Cadastrar</button>
+      <Button variant="secondary.main" ghost>Entrar</Button>
+      <Button variant="primary.main">Cadastrar</Button>
     </MenuWrapper.AuxNav>
   </MenuWrapper>
 )
