@@ -1,20 +1,12 @@
-import Title from '../components/Title'
-import Text from '../components/Text'
-import LinkButton from '../components/LinkButton'
+import Menu from '../src/components/commons/Menu'
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const Home = () => (
   <div>
-    <Title>My page</Title>
-    <Text>Hot reload :burn:</Text>
-    <hr />
-    <nav>
-      <ul>
-        <li><LinkButton href="/about">About page</LinkButton></li>
-        <li><LinkButton href="/erou">404 page</LinkButton></li>
-      </ul>
-    </nav>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <Menu />
   </div>
 )
 

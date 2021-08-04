@@ -1,6 +1,6 @@
-import Title from '../components/Title'
-import Text from '../components/Text'
-import LinkButton from '../components/LinkButton'
+import Title from '../src/components/Title'
+import Text from '../src/components/Text'
+import LinkButton from '../src/components/LinkButton'
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
