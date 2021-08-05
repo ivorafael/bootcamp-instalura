@@ -1,6 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
+import { propToStyle } from '../../../theme/utils/propToStyle'
+import { mediaQueries } from '../../../theme/utils/mediaQueries'
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -23,6 +25,7 @@ export const TextStylesVariants = {
 
 const TextBase = styled.span`
   ${ ( { variant, theme } ) => ( TextStylesVariants[ variant ] ) }
+  ${ propToStyle( 'textAlign' ) }
 `
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

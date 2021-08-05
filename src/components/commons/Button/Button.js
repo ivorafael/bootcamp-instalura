@@ -2,6 +2,7 @@ import styled, { css } from "styled-components"
 import { get } from "lodash"
 import { TextStylesVariants } from "../../foundation/Text/Text"
 import { mediaQueries } from '../../../theme/utils/mediaQueries'
+import { propToStyle } from '../../../theme/utils/propToStyle'
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -43,6 +44,9 @@ const Button = styled.button`
   transition: ${ ( { theme } ) => theme.transition };
 
   ${ ( { ghost } ) => ( ghost ? ButtonGhost : ButtonDefault ) }
+
+  ${ propToStyle( 'margin' ) }
+  ${ propToStyle( 'display' ) }
 
   &:hover,
   &:focus {
