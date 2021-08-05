@@ -1,15 +1,14 @@
-import Title from '../src/components/Title'
-import LinkButton from '../src/components/LinkButton'
+import Text from '../src/components/foundation/Text'
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const Page404 = () => (
   <div>
-    <Title>Page not found!!!1</Title>
+    <Text tag="h3" variant="title">Page not found!!!1</Text>
     <img src="https://i.ytimg.com/vi/gArbocrAO78/hqdefault.jpg" alt="Page not found" />
     <hr />
     <nav>
-      <LinkButton href="/">Back to Home</LinkButton>
+      <Text variant="paragraph1" tag="a" href="/">Back to Home</Text>
     </nav>
   </div>
 )

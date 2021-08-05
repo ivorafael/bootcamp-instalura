@@ -15,7 +15,7 @@ const mainNavItems = [ {
   href: '/faq'
 }, {
   children: 'Sobre',
-  href: '/sobre'
+  href: '/about'
 } ]
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

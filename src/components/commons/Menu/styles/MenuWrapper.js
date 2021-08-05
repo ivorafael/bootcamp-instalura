@@ -1,54 +1,112 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { mediaQueries } from '../../../../theme/utils/mediaQueries'
+import { TextStylesVariantsMap } from '../../../foundation/Text'
 
 export const MenuWrapper = styled.nav`
   font-family: 'Rubik', sans-serif;
-  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 18px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-`;
+  padding-left: 28px;
+  padding-right: 28px;
+  ${ mediaQueries( {
+  md: css`
+      justify-content: flex-start;
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      padding: 0 16px;
+      max-width: 768px;
+    `,
+  lg: css`
+      max-width: 1160px; 
+    `,
+  xl: css`
+      max-width: 1222px;
+    `,
+} ) }
+`
 
 MenuWrapper.Brand = styled.div`
-  justify-self: flex-start;
-  margin: 0;
   padding: 0;
+  margin: 0;
   order: 1;
-  grid-column: 1;
-`;
+  ${ mediaQueries( {
+  md: css`
+        width: 131px;
+        height: 32px;
+      `,
+} ) }
+  ${ mediaQueries( {
+  md: css`
+      order: initial;
+      padding-right: 16px;
+    `,
+} ) }
+`
 
 MenuWrapper.PrimaryNav = styled.div`
   padding: 0;
   margin: 0;
-  list-style: none;
   order: 3;
   width: 100%;
-  margin-top: 17px;
-  border-top: 1px solid ${ ( { theme } ) => theme.colors.tertiary.light.color };
-  border-bottom: 1px solid ${ ( { theme } ) => theme.colors.tertiary.light.color };
-  padding: 12px;
-  display: grid;
-  grid-auto-flow: column;
+  list-style: none;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  grid-column: 1/3;
-
-  a{
+  margin-top: 17px;
+  border-top: 1px solid #88989E;
+  border-bottom: 1px solid #88989E;
+  padding: 12px;
+  
+  ${ mediaQueries( {
+  md: css`
+      max-width: 332px;
+      justify-content: space-between;
+      flex: 1;
+      order: initial;
+      border: none;
+      margin: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    `,
+} ) }
+  a {
     text-align: center;
     display: block;
     text-decoration: none;
-    color: ${ ( { theme } ) => theme.colors.tertiary.light.color };
-    transition: ${ ( { theme } ) => theme.transition };
-    
+    color: #88989E;
+    transition: 200ms ease-in-out;
+    ${ mediaQueries( {
+  xs: css`
+        ${ TextStylesVariantsMap.smallestException }
+    `,
+  md: css`
+      ${ TextStylesVariantsMap.paragraph1 }
+    `,
+} ) }
     &:hover,
     &:focus {
-      /* font-weight: 500; */
+      font-weight: 500;
       color: #070C0E;
-
+      
     }
   }
-`;
+`
 
 MenuWrapper.AuxNav = styled.div`
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex: 1;
   order: 2;
-  grid-column: 2;
-  justify-self: flex-end;
-`;
+  justify-content: flex-end;
+  ${ mediaQueries( {
+  md: css`
+      order: initial;
+    `,
+} ) }
+`
