@@ -1,16 +1,14 @@
-import Title from '../src/components/Title'
-import Text from '../src/components/Text'
-import LinkButton from '../src/components/LinkButton'
+import Text from '../src/components/foundation/Text'
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const PageAbout = () => (
   <div>
-    <Title>About</Title>
-    <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolorem odio ipsam eos deleniti ea, itaque voluptate, voluptates consequatur tenetur placeat perferendis repellendus quasi eveniet nemo pariatur laudantium, maiores laboriosam.</Text>
+    <Text tag="h3" variant="title">Sobre</Text>
+    <Text tag="p" variant="paragraph1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolorem odio ipsam eos deleniti ea, itaque voluptate, voluptates consequatur tenetur placeat perferendis repellendus quasi eveniet nemo pariatur laudantium, maiores laboriosam.</Text>
     <hr />
     <nav>
-      <LinkButton href="/">Back to Home</LinkButton>
+      <Text variant="paragraph1" tag="a" href="/">Back to Home</Text>
     </nav>
   </div>
 )
