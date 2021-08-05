@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components"
 import { get } from "lodash"
-import { TextStylesVariantsMap } from "../../foundation/Text/Text"
+import { TextStylesVariants } from "../../foundation/Text/Text"
 import { mediaQueries } from '../../../theme/utils/mediaQueries'
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -21,13 +21,13 @@ const ButtonGhost = css`
 
 const ButtonMediaQueries = mediaQueries( {
   xs: css`
-      ${ TextStylesVariantsMap.smallestException }
+      ${ TextStylesVariants.smallestException }
     `,
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   sm: css`
-      ${ TextStylesVariantsMap.paragraph1 }
+      ${ TextStylesVariants.paragraph1 }
     `
 } )
 
