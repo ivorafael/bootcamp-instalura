@@ -1,4 +1,3 @@
-import theme from '../theme'
 import { mediaQueries } from './mediaQueries'
 import { mapValues } from 'lodash'
 
@@ -9,10 +8,8 @@ export const propToStyle = propName => (
     const propValue = props[ propName ]
 
     if ( typeof propValue === 'object' ) {
-      const { breakpoints } = theme
-
-      const mappedMediaQueries = mapValues( breakpoints, ( value, breakpoint ) => (
-        { [ propName ]: propValue[ breakpoint ] }
+      const mappedMediaQueries = mapValues( propValue, ( value ) => (
+        { [ propName ]: value }
       ) )
 
       return mediaQueries( mappedMediaQueries )
