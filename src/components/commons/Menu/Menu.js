@@ -3,6 +3,7 @@ import React from 'react'
 import { MenuWrapper } from './styles/MenuWrapper'
 import Logo from '../../../theme/Logo'
 import Button from '../Button/Button'
+import Text from '../../foundation/Text/Text'
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -28,7 +29,7 @@ const Menu = () => (
     <MenuWrapper.PrimaryNav as="ul">
       { mainNavItems.map( item => (
         <li key={ item.href }>
-          <a { ...item } />
+          <Text tag="a" variant="smallestException" { ...item } />
         </li>
       ) ) }
     </MenuWrapper.PrimaryNav>

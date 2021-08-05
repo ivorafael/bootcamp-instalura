@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components"
 import { get } from "lodash"
+import { TextStylesVariantsMap } from "../../foundation/Text/Text"
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 const ButtonDefault = css`
@@ -20,6 +21,8 @@ const Button = styled.button`
   opacity: 1;
   border-radius: ${ ( { theme } ) => theme.borderRadius };
   transition: ${ ( { theme } ) => theme.transition };
+
+  ${ TextStylesVariantsMap.smallestException }
   
   ${ ( { ghost } ) => ( ghost ? ButtonGhost : ButtonDefault ) }
 
