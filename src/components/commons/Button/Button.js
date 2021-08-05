@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components"
 import { get } from "lodash"
-import { TextStylesVariantsMap } from "../../foundation/Text/Text"
+import { TextStylesVariants } from "../../foundation/Text/Text"
 import { mediaQueries } from '../../../theme/utils/mediaQueries'
+import { propToStyle } from '../../../theme/utils/propToStyle'
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -21,13 +22,13 @@ const ButtonGhost = css`
 
 const ButtonMediaQueries = mediaQueries( {
   xs: css`
-      ${ TextStylesVariantsMap.smallestException }
+      ${ TextStylesVariants.smallestException }
     `,
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   sm: css`
-      ${ TextStylesVariantsMap.paragraph1 }
+      ${ TextStylesVariants.paragraph1 }
     `
 } )
 
@@ -43,6 +44,9 @@ const Button = styled.button`
   transition: ${ ( { theme } ) => theme.transition };
 
   ${ ( { ghost } ) => ( ghost ? ButtonGhost : ButtonDefault ) }
+
+  ${ propToStyle( 'margin' ) }
+  ${ propToStyle( 'display' ) }
 
   &:hover,
   &:focus {

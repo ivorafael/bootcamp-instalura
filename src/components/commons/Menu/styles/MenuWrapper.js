@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { mediaQueries } from '../../../../theme/utils/mediaQueries'
-import { TextStylesVariantsMap } from '../../../foundation/Text'
+import { TextStylesVariants } from '../../../foundation/Text'
 
 export const MenuWrapper = styled.nav`
   font-family: 'Rubik', sans-serif;
@@ -82,10 +82,10 @@ MenuWrapper.PrimaryNav = styled.div`
     transition: 200ms ease-in-out;
     ${ mediaQueries( {
   xs: css`
-        ${ TextStylesVariantsMap.smallestException }
+        ${ TextStylesVariants.smallestException }
     `,
   md: css`
-      ${ TextStylesVariantsMap.paragraph1 }
+      ${ TextStylesVariants.paragraph1 }
     `,
 } ) }
     &:hover,
