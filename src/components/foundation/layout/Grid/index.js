@@ -1,1 +1,1 @@
-export { GridContainer, GridRow, GridCol } from './Grid';
+export { default } from './Grid';

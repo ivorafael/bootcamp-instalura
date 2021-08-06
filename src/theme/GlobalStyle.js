@@ -1,17 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
 
-  ${ normalize }
+  ${normalize}
 
   html, body {
     margin: 0;
     padding: 0;
-    font-family: ${ ( { theme } ) => theme.fontFamily };
+    font-family: ${({ theme }) => theme.fontFamily};
   }
 
   /* Full height layout */
@@ -27,3 +27,5 @@ export const GlobalStyle = createGlobalStyle`
     flex-direction: column;
   }
 `;
+
+export default GlobalStyle;

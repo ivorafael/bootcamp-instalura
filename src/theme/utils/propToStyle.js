@@ -1,22 +1,22 @@
 import { mapValues } from 'lodash';
-import { mediaQueries } from './mediaQueries';
+import mediaQueries from './mediaQueries';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-export const propToStyle = ( propName ) => (
-  ( props ) => {
-    const propValue = props[ propName ];
+export default function propToStyle(propName) {
+  return (props) => {
+    const propValue = props[propName];
 
-    if ( typeof propValue === 'object' ) {
-      const mappedMediaQueries = mapValues( propValue, ( value ) => (
-        { [ propName ]: value }
-      ) );
+    if (typeof propValue === 'object') {
+      const mappedMediaQueries = mapValues(propValue, (value) => (
+        { [propName]: value }
+      ));
 
-      return mediaQueries( mappedMediaQueries );
+      return mediaQueries(mappedMediaQueries);
     }
 
     return {
-      [ propName ]: props[ propName ],
+      [propName]: props[propName],
     };
-  }
-);
+  };
+}

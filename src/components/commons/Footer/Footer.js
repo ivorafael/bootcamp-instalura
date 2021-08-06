@@ -14,7 +14,7 @@ const FooterWrapper = styled.footer`
     margin-right: 23px;
   }
   a {
-    color: ${ ( { theme } ) => theme.colors.primary.main.color };
+    color: ${({ theme }) => theme.colors.primary.main.color};
     text-decoration: none;
     transition: .3s;
     &:hover,
@@ -24,9 +24,10 @@ const FooterWrapper = styled.footer`
   }
 `;
 
-export default function Footer ( props ) {
+export default function Footer(props) {
   return (
-    <FooterWrapper { ...props }>
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <FooterWrapper {...props}>
       <a href="https://www.alura.com.br/">
         <img src="https://www.alura.com.br/assets/img/alura-logo.svg" alt="Logo Alura" />
       </a>
