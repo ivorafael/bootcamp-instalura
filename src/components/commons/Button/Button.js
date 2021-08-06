@@ -1,38 +1,38 @@
-import styled, { css } from "styled-components"
-import { get } from "lodash"
-import { TextStylesVariants } from "../../foundation/Text/Text"
-import { mediaQueries } from '../../../theme/utils/mediaQueries'
-import { propToStyle } from '../../../theme/utils/propToStyle'
+import styled, { css } from 'styled-components';
+import { get } from 'lodash';
+import { TextStylesVariants } from '../../foundation/Text/Text';
+import { mediaQueries } from '../../../theme/utils/mediaQueries';
+import { propToStyle } from '../../../theme/utils/propToStyle';
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const ButtonDefault = css`
   background-color: ${ ( { theme, variant } ) => get( theme, `colors.${ variant }.color` ) };
   color: ${ ( { theme, variant } ) => get( theme, `colors.${ variant }.contrastText` ) };
-`
+`;
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const ButtonGhost = css`
   color: ${ ( { theme, variant } ) => get( theme, `colors.${ variant }.color` ) };
   background-color: transparent;
-`
+`;
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const ButtonMediaQueries = mediaQueries( {
   xs: css`
       ${ TextStylesVariants.smallestException }
     `,
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   sm: css`
       ${ TextStylesVariants.paragraph1 }
-    `
-} )
+    `,
+} );
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const Button = styled.button`
   border: 0;
@@ -54,8 +54,8 @@ const Button = styled.button`
   }
 
   ${ ButtonMediaQueries }
-`
+`;
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-export default Button
+export default Button;

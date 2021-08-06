@@ -1,9 +1,15 @@
-import Head from 'next/head'
-import { ThemeProvider } from 'styled-components'
-import theme from '../src/theme'
-import { GlobalStyle } from '../src/theme/GlobalStyle'
+import React from 'react';
+import Head from 'next/head';
+import { ThemeProvider } from 'styled-components';
+import PropTypes from 'prop-types';
+
+import theme from '../src/theme';
+import { GlobalStyle } from '../src/theme/GlobalStyle';
 
 export default function App ( { Component, pageProps } ) {
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
   return (
     <>
       <Head>
@@ -17,5 +23,12 @@ export default function App ( { Component, pageProps } ) {
         <Component { ...pageProps } />
       </ThemeProvider>
     </>
-  )
+  );
 }
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+App.propTypes = {
+  Component: PropTypes.element.isRequired,
+  pageProps: PropTypes.shape.isRequired,
+};

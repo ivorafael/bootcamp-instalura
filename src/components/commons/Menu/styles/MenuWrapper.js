@@ -1,17 +1,8 @@
-import styled, { css } from 'styled-components'
-import { mediaQueries } from '../../../../theme/utils/mediaQueries'
-import { TextStylesVariants } from '../../../foundation/Text'
+import styled, { css } from 'styled-components';
+import { mediaQueries } from '../../../../theme/utils/mediaQueries';
+import { TextStylesVariants } from '../../../foundation/Text';
 
-export const MenuWrapper = styled.nav`
-  font-family: 'Rubik', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 18px;
-  padding-left: 28px;
-  padding-right: 28px;
-  ${ mediaQueries( {
+const menuWrapperMediaQueries = {
   md: css`
       justify-content: flex-start;
       margin-top: 32px;
@@ -27,26 +18,57 @@ export const MenuWrapper = styled.nav`
   xl: css`
       max-width: 1222px;
     `,
-} ) }
-`
+};
+
+export const MenuWrapper = styled.nav`
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  padding-left: 28px;
+  padding-right: 28px;
+  ${ mediaQueries( menuWrapperMediaQueries ) }
+`;
+
+const menuWrapperBrandMediaQueries = {
+  md: css`
+    width: 131px;
+    height: 32px;
+    order: initial;
+    padding-right: 16px;
+  `,
+};
 
 MenuWrapper.Brand = styled.div`
   padding: 0;
   margin: 0;
   order: 1;
-  ${ mediaQueries( {
+  ${ mediaQueries( menuWrapperBrandMediaQueries ) }
+`;
+
+const menuWrapperPrimaryNavMediaQueries = {
   md: css`
-        width: 131px;
-        height: 32px;
-      `,
-} ) }
-  ${ mediaQueries( {
-  md: css`
+      max-width: 332px;
+      justify-content: space-between;
+      flex: 1;
       order: initial;
-      padding-right: 16px;
+      border: none;
+      margin: 0;
+      padding-top: 0;
+      padding-bottom: 0;
     `,
-} ) }
-`
+};
+
+const menuWrapperPrimaryNavLinksMediaQueries = {
+  xs: css`
+        ${ TextStylesVariants.smallestException }
+    `,
+  md: css`
+      ${ TextStylesVariants.paragraph1 }
+    `,
+};
 
 MenuWrapper.PrimaryNav = styled.div`
   padding: 0;
@@ -62,32 +84,17 @@ MenuWrapper.PrimaryNav = styled.div`
   border-bottom: 1px solid #88989E;
   padding: 12px;
   
-  ${ mediaQueries( {
-  md: css`
-      max-width: 332px;
-      justify-content: space-between;
-      flex: 1;
-      order: initial;
-      border: none;
-      margin: 0;
-      padding-top: 0;
-      padding-bottom: 0;
-    `,
-} ) }
+  ${ mediaQueries( menuWrapperPrimaryNavMediaQueries ) }
+
   a {
     text-align: center;
     display: block;
     text-decoration: none;
     color: #88989E;
     transition: 200ms ease-in-out;
-    ${ mediaQueries( {
-  xs: css`
-        ${ TextStylesVariants.smallestException }
-    `,
-  md: css`
-      ${ TextStylesVariants.paragraph1 }
-    `,
-} ) }
+
+    ${ mediaQueries( menuWrapperPrimaryNavLinksMediaQueries ) }
+    
     &:hover,
     &:focus {
       font-weight: 500;
@@ -95,7 +102,13 @@ MenuWrapper.PrimaryNav = styled.div`
       
     }
   }
-`
+`;
+
+const menuWrapperAuxNavMediaQueries = {
+  md: css`
+      order: initial;
+    `,
+};
 
 MenuWrapper.AuxNav = styled.div`
   padding: 0;
@@ -104,9 +117,5 @@ MenuWrapper.AuxNav = styled.div`
   flex: 1;
   order: 2;
   justify-content: flex-end;
-  ${ mediaQueries( {
-  md: css`
-      order: initial;
-    `,
-} ) }
-`
+  ${ mediaQueries( menuWrapperAuxNavMediaQueries ) }
+`;

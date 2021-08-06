@@ -1,1 +1,1 @@
-export { default, TextStylesVariants } from './Text'
+export { default, TextStylesVariants } from './Text';

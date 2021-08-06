@@ -1,24 +1,24 @@
-import React from 'react'
+import React from 'react';
 
-import { MenuWrapper } from './styles/MenuWrapper'
-import Logo from '../../../theme/Logo'
-import Button from '../Button/Button'
-import Text from '../../foundation/Text/Text'
+import { MenuWrapper } from './styles/MenuWrapper';
+import Logo from '../../../theme/Logo';
+import Button from '../Button/Button';
+import Text from '../../foundation/Text/Text';
 
-//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const mainNavItems = [ {
   children: 'Home',
-  href: '/'
+  href: '/',
 }, {
   children: 'Perguntas frequentes',
-  href: '/faq'
+  href: '/faq',
 }, {
   children: 'Sobre',
-  href: '/about'
-} ]
+  href: '/about',
+} ];
 
-//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const Menu = () => (
   <MenuWrapper>
@@ -27,7 +27,7 @@ const Menu = () => (
     </MenuWrapper.Brand>
 
     <MenuWrapper.PrimaryNav as="ul">
-      { mainNavItems.map( item => (
+      { mainNavItems.map( ( item ) => (
         <li key={ item.href }>
           <Text tag="a" variant="smallestException" { ...item } />
         </li>
@@ -39,8 +39,8 @@ const Menu = () => (
       <Button variant="primary.main">Cadastrar</Button>
     </MenuWrapper.AuxNav>
   </MenuWrapper>
-)
+);
 
-//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-export default Menu
+export default Menu;
