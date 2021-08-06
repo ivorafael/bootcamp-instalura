@@ -1,6 +1,7 @@
-import Text from '../src/components/foundation/Text'
+import React from 'react';
+import Text from '../src/components/foundation/Text';
 
-//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const Page404 = () => (
   <div>
@@ -11,8 +12,8 @@ const Page404 = () => (
       <Text variant="paragraph1" tag="a" href="/">Back to Home</Text>
     </nav>
   </div>
-)
+);
 
-//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-export default Page404
+export default Page404;
