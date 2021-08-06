@@ -3,22 +3,33 @@ import Footer from '../src/components/commons/Footer/Footer'
 import Text from '../src/components/foundation/Text'
 import Button from '../src/components/commons/Button/Button'
 import { GridContainer, GridRow, GridCol } from '../src/components/foundation/layout/Grid'
+import { Box } from '../src/components/foundation/layout/Box'
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const Home = () => (
-  <div style={ {
-    flex: '1',
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-  } }>
+
+  <Box
+    flex="1"
+    display="flex"
+    flexWrap="wrap"
+    flexDirection="column"
+    justifyContent="space-between"
+    backgroundImage="url(/images/bubbles.svg)"
+    backgroundRepeat="no-repeat"
+    backgroundPosition="bottom right">
+
     <Menu />
 
-    <GridContainer>
+    <GridContainer marginTop={ { xs: '32px', md: '75px' } }>
       <GridRow>
-        <GridCol offset={ { xs: 0, md: 1 } } value={ { xs: 12, md: 5 } }>
+        <GridCol
+          display="flex"
+          flexDirection="column"
+          alignItems="flex-start"
+          justifyContent="center"
+          offset={ { xs: 0, md: 1 } }
+          value={ { xs: 12, md: 5 } }>
           <Text variant="title" tag="h1" color="tertiary.main" textAlign={ {
             xs: 'center',
             md: 'left',
@@ -50,11 +61,9 @@ const Home = () => (
         </GridCol>
       </GridRow>
     </GridContainer>
-
-    <div>
-    </div>
     <Footer />
-  </div>
+  </Box>
+
 )
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
