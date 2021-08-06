@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { mapValues } from 'lodash'
 import { mediaQueries } from '../../../../theme/utils/mediaQueries'
+import { propToStyle } from '../../../../theme/utils/propToStyle'
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -34,6 +35,8 @@ export const GridContainer = styled.div`
   margin-left: auto;
 
   ${ containerMediaQueries }
+
+  ${ propToStyle( 'marginTop' ) }
 `
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -101,4 +104,9 @@ export const GridCol = styled.div`
   ${ colValue }
 
   ${ colOffset }
+  
+  ${ propToStyle( 'display' ) }
+  ${ propToStyle( 'alignItems' ) }
+  ${ propToStyle( 'justifyContent' ) }
+  ${ propToStyle( 'flexDirection' ) }
 `
